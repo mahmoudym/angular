@@ -11,7 +11,7 @@ export class AlphPipe implements PipeTransform {
     }else if (args ==="descending"){
       return value.sort((a,b) => (a > b ? -1 : 1));
     }else{
-      return value.sort();
+      return value;
     }
 
   }

@@ -8,11 +8,16 @@ import { SortService } from '../services/sort.service';
 })
 export class TpComponent implements OnInit {
   numbers = [2,5,3,1,4]
-
+  param = "normal"
   constructor() {
   }
 
   ngOnInit() {
   }
-
+sortAscending(){
+  this.param = "ascending"
+}
+sortDescending(){
+  this.param = "descending"
+}
 }
