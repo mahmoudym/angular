@@ -1,3 +1,6 @@
-<li *ngFor="let number of numbers| alph">
+<li *ngFor="let number of numbers| alph:param">
      {{ number}}
    </li>
+
+<button class="btn btn-secondary" (click)="param = 'ascending'">ascending</button>
+<button class="btn btn-secondary" (click)="param = 'descending'">descending</button>

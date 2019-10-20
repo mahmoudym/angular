@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AlphPipe implements PipeTransform {
 
-  transform(value: any[]): any {
-    return value.sort()
+  transform(value: any[],args:string): any {
+    if (args === "ascending"){
+      return value.sort();
+    }else if (args ==="descending"){
+      return value.sort((a,b) => (a > b ? -1 : 1));
+    }
+
   }
 
 }
